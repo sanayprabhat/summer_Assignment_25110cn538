@@ -1,0 +1,45 @@
+
+import java.util.Scanner;
+
+public class question_115 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = "";
+        int choice;
+        do {
+            System.out.println("\n  String Operations  ");
+            System.out.println("1. Enter String");
+            System.out.println("2. Convert to Uppercase");
+            System.out.println("3. Reverse String");
+            System.out.println("4. Find Length");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+            sc.nextLine();
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter a string: ");
+                    str = sc.nextLine();
+                    break;
+                case 2:
+                    System.out.println("Uppercase: " + str.toUpperCase());
+                    break;
+                case 3:
+                    String rev = "";
+                    for (int i = str.length() - 1; i >= 0; i--) {
+                        rev = rev + str.charAt(i);
+                    }
+                    System.out.println("Reversed String: " + rev);
+                    break;
+                case 4:
+                    System.out.println("Length: " + str.length());
+                    break;
+                case 5:
+                    System.out.println("Exit");
+                    break;
+                default:
+                    System.out.println("Invalid input");
+            }
+        } while (choice != 5);
+    }
+}
